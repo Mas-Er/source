@@ -10,7 +10,7 @@ define Device/hk1-mini
   DEVICE_MODEL := HK1 Mini
   SOC := rk3229
   UBOOT_DEVICE_NAME := rk3229-hk1-mini
-  IMAGE/sysupgrade.img.gz := boot-common | boot-script nanopi-r2s | pine64-img | gzip | append-metadata
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script hk1-mini | pine64-img | gzip | append-metadata
   DEVICE_PACKAGES := kmod-usb-net-rtl8152
 endef
 TARGET_DEVICES += hk1-mini
