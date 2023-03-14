@@ -1,4 +1,4 @@
-ARCH:=armhf
+ARCH:=arm
 SUBTARGET:=armv7
 CPU_TYPE:=cortex-a7
 BOARDNAME:=RK322x boards (32 bit)
