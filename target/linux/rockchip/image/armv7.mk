@@ -5,6 +5,17 @@
 # FIT will be loaded at 0x02080000. Leave 16M for that, align it to 2M and load the kernel after it.
 KERNEL_LOADADDR := 0x03200000
 
+define Device/hk1-mini
+  DEVICE_VENDOR := HK
+  DEVICE_MODEL := HK1 Mini
+  SOC := rk3229
+  UBOOT_DEVICE_NAME := hk1-mini-rk3229
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script nanopi-r2s | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-usb-net-rtl8152
+endef
+TARGET_DEVICES += hk1-mini
+
+
 define Device/friendlyarm_nanopi-r2s
   DEVICE_VENDOR := FriendlyARM
   DEVICE_MODEL := NanoPi R2S
