@@ -6,8 +6,8 @@
 KERNEL_LOADADDR := 0x03200000
 
 define Device/hk1-mini
-  DEVICE_VENDOR := HK
-  DEVICE_MODEL := HK1 Mini
+  DEVICE_VENDOR := HK1 Mini
+  DEVICE_MODEL := rk3229_box
   SOC := rk3229
   UBOOT_DEVICE_NAME := rk3229-hk1-mini
   IMAGE/sysupgrade.img.gz := boot-common | boot-script hk1-mini | pine64-img | gzip | append-metadata
